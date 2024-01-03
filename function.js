@@ -1,5 +1,5 @@
 function myFunction() {
-    let carName = "Volvo";
+    let carName = "Volvos";
     console.log(carName);
 }
 
