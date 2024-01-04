@@ -1,4 +1,4 @@
-//console.log(new Date());
+// console.log(new Date());
 
 // const d = new Date("October 13, 2014 11:13:00");
 // console.log(d);
@@ -55,6 +55,6 @@
 // console.log(newDate);
 
 
-const d = new Date();
-const newDate = d.setFullYear(2020, 11, 3);
-console.log(newDate);
+// const d = new Date();
+// const newDate = d.setFullYear(2020, 11, 3);
+// console.log(newDate);
