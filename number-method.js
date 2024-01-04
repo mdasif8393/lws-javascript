@@ -23,4 +23,4 @@
 // console.log(parseInt(x));
 // console.log(parseFloat(x));
 
-console.log(parseFloat('10 12'));
+// console.log(parseFloat('10 12'));
