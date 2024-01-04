@@ -1,4 +1,4 @@
-////for each
+// //for each
 // const numbers = [45, 4, 9, 16, 25];
 // function myFunction(value, index, array) {
 //     console.log("value", value);
@@ -9,7 +9,7 @@
 // numbers.forEach(myFunction);
 
 
-////map
+// //map
 // const numbers1 = [45, 4, 9, 16, 25];
 // const result = numbers1.map(myFunction);
 
@@ -19,7 +19,7 @@
 // console.log(result);
 
 
-//// filter
+// // filter
 // const numbers = [45, 4, 9, 16, 25];
 // const newArray = numbers.filter(myFunction);
 
@@ -28,7 +28,7 @@
 // }
 // console.log(newArray);
 
-////reduce
+// //reduce
 // const numbers = [45, 4, 9, 16, 25];
 // const reduce = numbers.reduce(myFunction, 10);
 
@@ -40,7 +40,7 @@
 
 
 
-//// every
+// // every
 // const numbers = [45, 4, 9, 16, 25];
 // const newArray = numbers.every(myFunction);
 
@@ -50,7 +50,7 @@
 
 // console.log(newArray);
 
-////some
+// //some
 // const numbers = [45, 4, 9, 16, 25];
 // let someOver18 = numbers.some(myFunction);
 
@@ -59,18 +59,18 @@
 // }
 // console.log(someOver18);
 
-//// form
+// // form
 // console.log(Array.from("ABCDEFG"));
 
-////iondexof()
+// //iondexof()
 // const fruits = ["Apple", "Banana"];
 // console.log(fruits.indexOf("Apple"));
 
 
-////lastIndexof()
+// //lastIndexof()
 
 
-////keys
+// //keys
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
 // const keys = fruits.keys();
 // for (let x of keys) {
