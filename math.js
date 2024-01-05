@@ -10,5 +10,5 @@
 
 // console.log(Math.max(2, 44, 2, 55, 66));
 
-const a = Math.random() * 1000;
-console.log(a);
+// const a = Math.random() * 1000;
+// console.log(a);
