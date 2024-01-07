@@ -60,3 +60,7 @@
 // console.log(person.fullName());
 // console.log(person.fullName.bind(member));
 
+
+
+
+
