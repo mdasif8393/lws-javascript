@@ -6,13 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="confirm"></div>
-    <div id="prompt"></div>
 
-    <div><input type="button" value="Show alert" onclick="showAlert()"></div>
-    <div><input type="button" value="Show confirm" onclick="showConfirm()"></div>
-    <div><input type="button" value="Show prompt" onclick="showPrompt()"></div>
+    <div id="timeout"></div>
+    <div id="interval"></div>
 
-    <script src="bom-popup.js"></script>
+    <button onclick="startTimeout()">Start timeout</button><br><br>
+    <button onclick="stopTimeout()">Stop timeout</button><br><br>
+    <button onclick="startInterval()">Start interval</button><br><br>
+    <button onclick="stoptInterval()">Stop interval</button>
+
+    <script src="bom-timing.js"></script>
 </body>
 </html>
