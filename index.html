@@ -7,14 +7,13 @@
 </head>
 <body>
 
-    <div id="timeout"></div>
-    <div id="interval"></div>
+    <button onclick="setCookie('name', 'Asif Zaman', 2)">Set name cookie</button><br><br>
+    <button onclick="setCookie('username', 'asif', 2)">Set username cookie</button><br><br>
+    <button onclick="alert(getCookie('name'))">Get name cookie</button><br><br>
+    <button onclick="alert(getCookie('username'))">Get username cookie</button>
+    <button onClick="checkCookie('username')">Check Name Cookie</button>
+    <button onClick="checkCookie('age')">Check Age Cookie</button>
 
-    <button onclick="startTimeout()">Start timeout</button><br><br>
-    <button onclick="stopTimeout()">Stop timeout</button><br><br>
-    <button onclick="startInterval()">Start interval</button><br><br>
-    <button onclick="stoptInterval()">Stop interval</button>
-
-    <script src="bom-timing.js"></script>
+    <script src="bom-cookies.js"></script>
 </body>
 </html>
