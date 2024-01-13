@@ -1,64 +1,77 @@
-// let headerElement = document.getElementById("header");
-// headerElement.style.borderBottom = "3px solid red"
-// headerElement.style.fontSize = "30px";
+/*
+ * Title: To Do Application using vanilla JS DOM
+ * Description: This JS file has all the JS functions necessary to control the to do application
+ * Author: Sumit Saha ( Learn with Sumit )
+ * Date: 12/17/2020
+ *
+ */
 
-// console.dir(document)
-
-// console.log(document.getElementsByClassName("item")[0]);
-
-// let itemUl = document.getElementById("items");
-// const items = itemUl.getElementsByClassName("item");
-// for (let i = 0; i < items.length; i++) {
-//     items[i].style.color = "red";
-// };
-
-
-// let items = document.getElementsByTagName("img");
-// console.log(items);
+// select elements & assign them to variables
+let newTask = document.querySelector('#new-task');
+let form = document.querySelector('form');
+let todoUl = document.querySelector('#items');
+let completeUl = document.querySelector('.complete-list ul');
 
 
-// Query Selector
-// let header = document.querySelector("#new-task");
-// console.log(header.textContent);
+// functions
+let createTask = function (task) {
+    let listItem = document.createElement('li');
+    let checkBox = document.createElement('input');
+    let label = document.createElement('label');
 
-// let newTask = document.querySelector("#new-task");
-// console.log(newTask);
+    label.innerText = task;
+    checkBox.type = 'checkbox';
 
-// const lastItem = document.querySelector(".item:last-child");
-// lastItem.style.color = "red";
+    listItem.appendChild(checkBox);
+    listItem.appendChild(label);
 
-// const lastItems = document.querySelectorAll(".item:last-child");
-// for (let element of lastItems) {
-//     element.style.color = "red";
-// }
+    return listItem;
+}
 
-// const lastItem = document.querySelector(".item:nth-child(2)");
-// lastItem.style.color = "red";
+let addTask = function (event) {
+    event.preventDefault();
+    let listItem = createTask(newTask.value);
+    todoUl.appendChild(listItem);
+    newTask.value = "";
+    // bind the new list item to the incomplete list
+    bindInCompleteItems(listItem, completeTask);
+}
 
-// const lastItem = document.querySelector("#items").querySelector(".item:nth-child(2)");
-// lastItem.style.color = "red";
+let completeTask = function () {
+    let listItem = this.parentNode;
+    let deleteBtn = document.createElement('button');
+    deleteBtn.innerText = 'Delete';
+    deleteBtn.className = 'delete';
+    listItem.appendChild(deleteBtn);
 
+    let checkBox = listItem.querySelector('input[type="checkbox"]');
+    checkBox.remove();
+    completeUl.appendChild(listItem);
+    bindCompleteItems(listItem, deleteTask);
+}
 
+let deleteTask = function () {
+    let listItem = this.parentNode;
+    let ul = listItem.parentNode;
+    ul.removeChild(listItem);
+}
 
+let bindInCompleteItems = function (taskItem, checkboxClick) {
+    let checkBox = taskItem.querySelector('input[type="checkbox"]');
+    checkBox.onchange = checkboxClick;
+}
 
+let bindCompleteItems = function (taskItem, deleteButtonClick) {
+    let deleteButton = taskItem.querySelector('.delete');
+    deleteButton.onclick = deleteButtonClick;
+}
 
+for (let i = 0; i < todoUl.children.length; i++) {
+    bindInCompleteItems(todoUl.children[i], completeTask);
+}
 
-//DOM Hierarch
-// const grandParent = document.querySelector(".todo-list")
-// // const parent = grandParent.children;
-// const children = grandParent.querySelectorAll(".item");
-// console.log(children);
+for (let i = 0; i < completeUl.children.length; i++) {
+    bindCompleteItems(completeUl.children[i], deleteTask);
+}
 
-
-// const children = document.querySelector(".item");
-// // const parent = children.parentElement;
-// // console.log(parent);
-
-// const grandParent = children.closest(".todo-list");
-// console.log(grandParent);
-
-
-
-// const childrenTwo = document.querySelector('.item').nextElementSibling;
-// const childrenOne = childrenTwo.previousElementSibling;
-// childrenOne.style.color = "red";
+form.addEventListener('submit', addTask);
