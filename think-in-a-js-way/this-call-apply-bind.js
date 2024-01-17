@@ -150,8 +150,9 @@
 
 
 // window binding
-'use strict'
+
 var printName = function () {
+    console.log(window === this);
     console.log(this.name); // undefined
 }
 
