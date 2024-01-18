@@ -151,13 +151,13 @@
 
 // window binding
 
-var printName = function () {
-    console.log(window === this);
-    console.log(this.name); // undefined
-}
+// var printName = function () {
+//     console.log(window === this);
+//     console.log(this.name); // undefined
+// }
 
-var sakib = {
-    name: "Sakib"
-}
+// var sakib = {
+//     name: "Sakib"
+// }
 
-printName()
+// printName()
