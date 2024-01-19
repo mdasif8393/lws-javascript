@@ -34,8 +34,8 @@
 
 // async await
 
-async function friendyFunction() {
-    return `Hello`;
-}
+// async function friendyFunction() {
+//     return `Hello`;
+// }
 
-console.log(friendyFunction());
+// console.log(friendyFunction());
